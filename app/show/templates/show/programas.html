@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block header %}<h1>{% block title %}Tabla de Programas{% endblock title %}</h1>{% endblock header %}
+
+{% block content %}
+    {% for dato in datos %}
+        <p>{{ dato['id'] }} -- {{ dato['nombre_excel'] }}
+             -- {{ dato['nombre_monitor'] }} -- {{ dato['activo'] }}</p>
+    {% endfor %}
+{% endblock content %}

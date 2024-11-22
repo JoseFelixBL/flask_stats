@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% set mes = datos[0]['Mes'] %}
+{% set ano = datos[0]['Año'] %}
+{% set programa = datos[0]['Programa'] %}
+
+{% block header %}
+    <h1>{% block title %}Datos para facturar {{ programa }} {{ ano }}-{{ mes }} {% endblock title %}</h1>
+{% endblock header %}
+
+{% block content %}
+    <table>
+        {% for row in datos %}
+            {% if loop.first %}
+                <tr>
+                    {% for key in row.keys() %}<th><samp>{{ key }}</samp></th>{% endfor %}
+                </tr>
+            {% endif %}
+            <tr>
+                    {% for value in row.values() %}<td><samp>{{value}}</samp></td>{% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <h1>{% block title %}Facturar qué: {% endblock title %}</h1>
+{% endblock header %}
+
+{% block content %}
+    <form method='post'>
+        <label for="ano-mes">Selecciona mes y año de la consulta</label><br>
+        <input type="month" id="ano-mes" name="ano-mes" required><br><br>
+        <p>Selecciona el programa</p>
+        {% for programa in programas %}
+            <input type="radio" id={{ programa['id'] }} name="id" value={{ programa['id'] }} required>
+            <label for={{ programa['id'] }}>{{ programa['nombre_monitor'] }}</label><br>
+        {% endfor %}
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock content %}

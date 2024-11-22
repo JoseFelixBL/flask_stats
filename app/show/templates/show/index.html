@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <h1>{% block title %}Datos a mostrar{% endblock title %}</h1>
+{% endblock header %}
+
+{% block content %}
+    <ul>
+        <li><a href="{{ url_for("show.programas") }}"> Lista de programas</a></li>
+        <li><a href="{{ url_for("show.grupos") }}"> Lista de grupos</a></li>
+        <li><a href="{{ url_for("show.facturar_que") }}"> Sacar datos para facturar</a></li>
+    </ul>
+{% endblock content %}

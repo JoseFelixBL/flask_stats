@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block header %}<h1>{% block title %}Tabla de Grupos{% endblock title %}</h1>{% endblock header %}
+
+{% block content %}
+    {% for dato in datos %}
+        <p>{{ dato['grupo'] }} -- {{ dato['grupo_desc'] }}</p>
+    {% endfor %}
+{% endblock content %}
