@@ -1,0 +1,10 @@
+html {
+    height: 100%;
+    background-image: linear-gradient(180deg, #1ECBE1, #fff 20%, #fff 80%, #E1341E);
+}
+
+th,
+td {
+    padding: 1px 6px;
+    text-align: right;
+}
