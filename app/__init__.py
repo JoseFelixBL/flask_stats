@@ -24,4 +24,6 @@ def create_app():
     from . import show
     app.register_blueprint(show.bp)
 
+    # print(app.url_map)  # Para ver las reglas registradas en la app
+
     return app
